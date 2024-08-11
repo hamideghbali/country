@@ -17,7 +17,7 @@ const HomePage = ({ countries }) => {
   return (
     <div className="container mx-auto p-4">
       <header className="mb-4">
-        <h1 className="text-2xl font-bold dark:text-white">Country List</h1> {/* Dark mode text */}
+        <h1 className="text-3xl font-bold dark:text-white">Country List</h1> {/* Dark mode text */}
         <div className="mt-4 flex flex-col sm:flex-row sm:items-center">
           <input
             type="text"
@@ -45,7 +45,7 @@ const HomePage = ({ countries }) => {
         {filteredCountries.map(country => (
           <Link key={country.cca3} href={`/${country.cca3}`}>
             <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105">
-              <div className="relative w-full h-40"> {/* Set a fixed height */}
+              <div className="relative w-full h-64 md:h-48 lg:h-40"> {/* Increased height for mobile */}
                 <Image
                   src={country.flags.png} 
                   alt={`${country.name.common} flag`} 

@@ -39,11 +39,11 @@ export default function RootLayout({ children }) {
         <title>Country</title> {/* Set the title here */}
         <meta name="description" content="List of countries and their details" />
       </Head>
-      <body className={`${inter.className} ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-        <div className="fixed top-4 right-4 z-50">
+      <body className={`${inter.className} ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"} md:px-40`}>
+        <div className="fixed top-4 right-4 z-50 md:pr-28">
           <button 
             onClick={toggleTheme}
-            className="text-2xl p-2 bg-gray-200 rounded dark:bg-gray-700"
+            className="text-3xl p-2 bg-gray-200 rounded dark:bg-gray-700"
           >
             {theme === "light" ? <IoMoon /> : <AiOutlineSun />}
           </button>
